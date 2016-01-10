@@ -1,0 +1,23 @@
+.member_navigation {
+  background: #383838;
+  overflow: hidden;
+}
+
+.member_navigation h2 {
+	color: #FFFFFF;
+}
+
+.member_navigation img {
+	float: left;
+	width: 75px;
+	margin: 10px 10px 4px 10px;
+}
+
+.navbar {
+	border: 0 !important;
+	border-radius: 0 !important;
+}
+
+.navbar-default {
+	background-color: #383838 !important;
+}

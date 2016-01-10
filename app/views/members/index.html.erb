@@ -1,0 +1,4 @@
+<%  @member.each do |member| %>
+	<h1><%= link_to member.title, member %></h1>
+	<p><%= member.created_at.strftime('%B, %d, %Y') %></p>
+<% end %>

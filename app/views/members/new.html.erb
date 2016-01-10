@@ -1,0 +1,35 @@
+<h1>Add New Form</h1>
+
+<%= form_for :member, url: members_path do |f| %>
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :video %>
+		<%= f.text_field :video %>
+	</p>
+
+	<p>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</p>
+
+	<p>SEO info</p>
+
+	<p>
+		<%= f.label :web_title %>
+		<%= f.text_field :web_title %>
+	</p>
+
+	<p>
+		<%= f.label :meta_description %>
+		<%= f.text_field :meta_description %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+	
+<% end %>

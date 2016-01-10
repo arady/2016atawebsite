@@ -1,0 +1,84 @@
+.program_taekwondo {
+	background-color: grey;
+	width: 100%;
+	overflow: hidden;
+}
+
+.program_taekwondo h1 {
+	margin: 0;
+}
+
+.taekwondo_left {
+	width: 400px;
+	float: left;
+	margin: 25px; 
+}
+
+.taekwondo_left img {
+	width: 300px;
+}
+
+.takewondo_menu {
+	width: 800px;
+	display:  inline-block;
+}
+
+.takewondo_menu ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+.takewondo_menu a {
+	color: #000000;
+}
+
+.taekwondo_right {
+	width: 800px;
+	float: left;
+}
+
+.taekwondo_right img {
+	width: 100%;
+}
+
+.program_krav_left {
+	width: 700px;
+	float: left;
+	margin: 25px;
+}
+
+.program_krav_right {
+	width: 300px;
+	float: left;
+}
+
+.program_krav_right img {
+	width: 100%;
+}
+
+.program_bjj_full {
+	width: 100%;
+	background: grey;
+	overflow: hidden;
+}
+
+.program_bjj_left {
+	width: 600px;
+	float: left;
+}
+
+.program_bjj_left img {
+	display: block;
+	margin: auto;
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
+.program_bjj_right {
+	width: 700px;
+	float: left;
+}
+
+
+
+

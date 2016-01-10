@@ -1,0 +1,55 @@
+<div class="wrapper">
+	<div class="school">
+		<h1>Trusted Martial Arts School</h1>
+		<div class="school_info">
+			<h3>The Years of training in Boise Idaho</h3>
+			<p>Our staff has had many years of teaching in the Treasure Valley. The combined experiance of all of our instructors make a preimer training destination for any skill level. We also offer different training styles to fit anyone's needs. Weather your looking to train to be healthy or want to learn street self-defense, we have what your looking for.</p>
+		</div>
+	</div>
+
+	<div class="school_location">
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.787896801896!2d-116.28946557709459!3d43.59013410497452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54ae565656fc7875%3A0x3221c8735f2ebd39!2s8511+W+Overland+Rd%2C+Boise%2C+ID+83709!5e0!3m2!1sen!2sus!4v1451786732939" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+		<div class="map_info">
+			<div class="map_row">
+				<h3>Address</h3>
+				<p>8511 W Overland Rd Boise Idaho, 83709</p>
+			</div>
+			<hr>
+			<div class="map_row">
+				<h3>Phone Number</h3>
+				<p>208.376.1718</p>
+			</div>
+			<hr>
+			<div class="map_row">
+				<h3>Email</h3>
+				<p>traditionalata@gmail.com</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="instructor_highlights">
+		<div class="instructor_wrapper">
+			<h1>Instructors</h1>
+			<%= image_tag('main_instructor.jpg', :class => 'instructor_image') %>
+			<div class="instuctor_text">
+				<h3>Andrew Rady</h3>
+				<h4>Owner, Cheif instructor</h4>
+				<p>Andrew Rady is a fourthe degree black belt in the ATA. He is also a blue belt in Brazilian Jiu-Jitsu under Keith Owen, along with a couple years of training in Krav Maga. Andrew Rady has competed extensivly in ATA compeition around the country. <%= link_to 'Read more', '/Instructors' %></p>
+			</div>
+			<div class="instuctor_text">
+				<h4>More Instructors</h4>
+				<p>We have a hand selected staff that works very hard to teach martial arts. Check out more of our instructors <%= link_to 'here.', '/Instructors' %></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="about_contact">
+		<div class="about_contact_form">
+			<h1>Got a question?</h1>
+			<h2>Send us an email</h2>
+			<%= render 'contacts/form', :contact => @contact  %> 
+		</div>
+	</div>
+</div>

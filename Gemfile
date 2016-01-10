@@ -9,10 +9,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise', '~> 3.5.2'
 gem "paperclip", "~> 4.3"
 gem 'friendly_id', '~> 5.1'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

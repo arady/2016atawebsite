@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ata</title>
+  <title>Traditional ATA</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class=" navigation">
+  <%= image_tag("logo.png") %>
+  <div id="phone_number">
+    <h1><a href="#">208-376-1718</a></h1>
+  </div>
+  <div class='main_menu'>
+    <ul>
+      <li><%= link_to 'Home', root_path %></a></li>
+      <li><%= link_to 'Programs', '/programs' %></li>
+      <li><a href="#">Testimonals</a></li>
+      <li><%= link_to "About Us", '/about' %></li>
+      <li><%= link_to 'Members', '/members/home' %></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </div>
+</nav>
 
 <%= yield %>
+
+<footer>
+  <div class="footer_logo">
+    <%= image_tag("logo.png", :class => "mini_logo") %>
+  </div>
+  <div class="site_map">
+    <h3>Site map</h3>
+  </div>
+  <div class="resources">
+    <h3>Resources</h3>
+    <ul>
+      <li><a href="#">Schedule</a></li>
+      <li><a href="#">Blue Sheet</a></li>
+      <li><a href="#">Gold Sheet</a></li>
+  </div>
+  <div class="social_media">
+    <%= image_tag("social_media_icons/fb_small.png") %>
+    <%= image_tag("social_media_icons/twitter.png") %>
+    <%= image_tag("social_media_icons/youtube.png") %>
+  </div>
+</footer>
 
 </body>
 </html>
