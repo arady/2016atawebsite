@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('page:load', function(){
 	$('.junior_content, .adult_content').hide();
 
 	$('.takewondo_menu li').click(function(){

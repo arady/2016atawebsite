@@ -5,7 +5,7 @@ class MembersController < ApplicationController
 	end
 
 	def new
-
+		@member = Member.new
 	end
 
 	def create 
@@ -17,6 +17,20 @@ class MembersController < ApplicationController
 
 	def show
 		@member = Member.find(params[:id])
+	end
+
+	def edit
+		@member = Member.find(params[:id])
+	end
+
+	def update
+		@member = Member.find(params[:id])	
+
+		if @member.update(params[:member].permit(:title, :video, :description, :web_title, :meta_description))
+			redirect_to @member
+		else
+			render 'edit'
+		end
 	end
 
 	private

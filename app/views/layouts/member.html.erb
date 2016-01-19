@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Traditional ATA</title>
+  <title>Traditional ATA |
+  <% if current_page?(members_path) %> 
+    Home 
+  <% elsif current_page?(action: 'new')  %>
+    Edit 
+  <% elsif current_page?(action: 'edit')  %>
+    New 
+  <% elsif current_page?(Member.find(params[:id])) %>
+    <%= @member.web_title %>
+  <% end %>
+  </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <mata name='description' content=
+  <% if current_page?(members_path) %>
+    'This is just a filller at the moment for testing'
+  <% elsif current_page?(action: 'new')  %>
+    'more'
+  <% elsif current_page?(action: 'edit')  %>
+    'more'
+  <% elsif current_page?(Member.find(params[:id])) %>
+    '<%= @member.meta_description %>'>
+  <% end %>
 </head>
 <body>
 <div class="member_navigation">
@@ -21,18 +41,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Members</a>
+      <%= link_to('Back to Main Site', root_path, :class => 'navbar-brand') %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+        <li class="active"><%= link_to '/members/' do %>Home <span class="sr-only">(current)</span> <% end %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">White - Yellow <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Songahm One</a></li>
-            <li><a href="#">Songahm Two</a></li>
+            <li><%= link_to 'Songahm One', '/members/1' %></li>
+            <li><%= link_to 'Songahm Two', '/members/2' %></li>
             <li><a href="#">Songahm three</a></li>
           </ul>
         </li>
@@ -57,7 +77,9 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<%= yield %>
+<div class='video_wrapper'>
+  <%= yield %>
+</div>
 
 <footer>
   <div class="footer_logo">

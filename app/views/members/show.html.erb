@@ -1,29 +1,31 @@
-<h1>
-	<%= @member.title %>
-</h1>
+<div class='video_title'>
+	<h1>
+		<%= @member.title %>
+	</h1>
+</div>
 
 <p>
-	Submitted <%= time_ago_in_words(@member.created_at) %>
+ <%= link_to 'Edit', edit_member_path(@member) %>
 </p>
 
-<p>
-	<%= @member.video %>
-</p>
+<div class='video_form'>
+	<iframe src="<%= @member.video %>"></iframe>
+</div>
 
-<p>
-	<%= @member.description %>
-</p>
+<div class='video_links'>
+	<h3>Links</h3>
+	<h4>PDF version</h4>
+	<a href="#">Form PDF version</a>
+	<h4>Homework</h4>
+	<a href="#">Homework</a>
+</div>
+
+<div class='video_content'>
+	<h2>Form Info</h2>
+	<p>
+		<%= @member.description.html_safe %>
+	</p>
+</div>
 
 
-<p>
-	<%= @member.description %>
-</p>
-
-<p>
-	<%= @member.web_title %>
-</p>
-
-<p>
-	<%= @member.meta_description %>
-</p>
 

@@ -14,6 +14,7 @@ gem 'devise', '~> 3.5.2'
 gem "paperclip", "~> 4.3"
 gem 'friendly_id', '~> 5.1'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'ckeditor_rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

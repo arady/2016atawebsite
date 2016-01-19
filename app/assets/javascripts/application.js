@@ -13,10 +13,11 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require ckeditor-jquery
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
+var ready = function() { 
 	$('.slider').slick({
       dots: true,
 	  speed: 300,
@@ -32,7 +33,9 @@ $(document).ready(function(){
 	$('.parent_menu').click(function(){
 		alert('For the horde!');
 	});
+}
 
-});
+$(document).ready(ready);
+$(document).on('page:load', ready);
 
 
