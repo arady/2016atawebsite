@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112053356) do
+ActiveRecord::Schema.define(version: 20160122235127) do
 
   create_table "members", force: :cascade do |t|
     t.string   "title"
@@ -19,9 +19,13 @@ ActiveRecord::Schema.define(version: 20160112053356) do
     t.text     "description"
     t.string   "web_title"
     t.string   "meta_description"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.text     "requirments"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

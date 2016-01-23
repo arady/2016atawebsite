@@ -26,7 +26,7 @@ class MembersController < ApplicationController
 	def update
 		@member = Member.find(params[:id])	
 
-		if @member.update(params[:member].permit(:title, :video, :description, :web_title, :meta_description))
+		if @member.update(params[:member].permit(:title, :video, :image, :description, :web_title, :meta_description))
 			redirect_to @member
 		else
 			render 'edit'
@@ -35,6 +35,6 @@ class MembersController < ApplicationController
 
 	private
 		def post_params
-			params.require(:member).permit(:title, :video, :description, :web_title, :meta_description)
+			params.require(:member).permit(:title, :video, :image, :description, :web_title, :meta_description)
 		end
 end
